@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ArrowUpRight, Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '../../i18n/LanguageContext';
+import { useSmoothScroll } from './SmoothScrollProvider';
 import { useTime } from '../../hooks/useTime';
 import { useMagnetic } from '../../hooks/useMagnetic';
 import LanguageSwitch from '../ui/LanguageSwitch';
@@ -8,6 +9,7 @@ import './Navbar.css';
 
 export default function Navbar() {
   const { t } = useLanguage();
+  const { scrollTo } = useSmoothScroll();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const ulaanbaatarTime = useTime('Asia/Ulaanbaatar');
@@ -44,14 +46,36 @@ export default function Navbar() {
     };
   }, [isMobileMenuOpen]);
 
-  const closeMobileMenu = () => setIsMobileMenuOpen(false);
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    document.body.style.overflow = '';
+  };
+
+  const handleNavClick = (e, href) => {
+    if (!href || !href.startsWith('#')) return;
+    e.preventDefault();
+    closeMobileMenu();
+
+    const target = href === '#hero' ? 0 : href;
+    const offset = href === '#hero' ? 0 : -20;
+    scrollTo(target, { offset, duration: 1.2 });
+
+    if (window.history && window.history.pushState) {
+      window.history.pushState(null, '', href);
+    }
+  };
 
   return (
     <>
       <header className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}>
         <div className="container navbar__inner">
           <div ref={brandRef} className="navbar__brand-wrapper">
-            <a href="#hero" className="navbar__brand" aria-label={t.ui.homeAria}>
+            <a
+              href="#hero"
+              className="navbar__brand"
+              aria-label={t.ui.homeAria}
+              onClick={(e) => handleNavClick(e, '#hero')}
+            >
               <div className="navbar__logo-badge">
                 <span className="navbar__logo-glyph">KS</span>
                 <span className="navbar__logo-pip" />
@@ -67,7 +91,12 @@ export default function Navbar() {
             <ul className="navbar__links">
               {t.nav.links.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="navbar__link" data-interactive="true">
+                  <a
+                    href={link.href}
+                    className="navbar__link"
+                    data-interactive="true"
+                    onClick={(e) => handleNavClick(e, link.href)}
+                  >
                     {link.label}
                   </a>
                 </li>
@@ -85,7 +114,12 @@ export default function Navbar() {
             <LanguageSwitch />
 
             <div ref={ctaRef} className="navbar__cta-wrapper">
-              <a href={t.nav.cta.href} className="navbar__cta-btn" data-interactive="true">
+              <a
+                href={t.nav.cta.href}
+                className="navbar__cta-btn"
+                data-interactive="true"
+                onClick={(e) => handleNavClick(e, t.nav.cta.href)}
+              >
                 <span>{t.nav.cta.label}</span>
                 <ArrowUpRight size={15} aria-hidden="true" />
               </a>
@@ -119,7 +153,7 @@ export default function Navbar() {
               <a
                 href={link.href}
                 className="navbar__mobile-link"
-                onClick={closeMobileMenu}
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 <span>{link.label}</span>
                 <span className="navbar__mobile-index">0{index + 1}</span>
@@ -138,7 +172,7 @@ export default function Navbar() {
           <a
             href={t.nav.cta.href}
             className="navbar__cta-btn navbar__cta-btn--mobile"
-            onClick={closeMobileMenu}
+            onClick={(e) => handleNavClick(e, t.nav.cta.href)}
           >
             <span>{t.nav.cta.label}</span>
             <ArrowUpRight size={18} aria-hidden="true" />
@@ -148,3 +182,4 @@ export default function Navbar() {
     </>
   );
 }
+
