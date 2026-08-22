@@ -1,0 +1,55 @@
+:root {
+  --bg-void: #050505;
+  --bg-surface: #0c0c0c;
+  --bg-surface-elevated: #121212;
+  --bg-surface-hover: #181818;
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(255, 255, 255, 0.12);
+  --border-focus: rgba(255, 255, 255, 0.22);
+
+  --text-primary: #f5f4ef;
+  --text-secondary: #9a9a94;
+  --text-muted: #5c5c58;
+
+  --accent: #c8ff00;
+  --accent-hover: #d6ff3d;
+  --accent-contrast: #050505;
+  --accent-subtle: rgba(200, 255, 0, 0.09);
+  --accent-glow: rgba(200, 255, 0, 0.32);
+  --accent-warm: #e8ff8a;
+
+  --status-available: #3dffb0;
+  --status-busy: #ffaa00;
+
+  --font-display: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --text-hero: clamp(3.1rem, 7.2vw + 0.4rem, 7.25rem);
+  --text-h1: clamp(2.4rem, 5vw, 4.5rem);
+  --text-h2: clamp(2rem, 3.8vw, 3.4rem);
+  --text-h3: clamp(1.25rem, 2vw, 1.75rem);
+  --text-lead: clamp(1.05rem, 1.3vw, 1.3rem);
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  --text-micro: 0.75rem;
+
+  --container-max: 1400px;
+  --container-padding: clamp(1.25rem, 4.2vw, 4rem);
+  --nav-height: 84px;
+  --section-space: clamp(5.5rem, 12vw, 10rem);
+
+  --radius-none: 0px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: 160ms var(--ease-out);
+  --transition-base: 280ms var(--ease-out);
+  --transition-smooth: 560ms var(--ease-smooth);
+}
