@@ -9,14 +9,18 @@ const shared = {
 };
 
 export const dictionaries = {
+  // ============================================================
+  // ENGLISH
+  // ============================================================
+
   en: {
     meta: {
       ...shared.meta,
-      studioType: "Digital Engineering & Design Studio",
+      studioType: "Digital Design & Development Studio",
       location: "Ulaanbaatar, Mongolia",
-      title: "KSDigital — Digital Experiences & Web Development",
+      title: "KSDigital — Digital Design & Development",
       description:
-        "KSDigital is a premier digital studio based in Ulaanbaatar, Mongolia. We create high-performance bespoke websites, web applications, and custom digital platforms.",
+        "KSDigital is a digital studio based in Ulaanbaatar, Mongolia. We design and build modern websites, web applications, and custom digital products.",
       status: {
         isAvailable: true,
         text: "Available for new projects",
@@ -29,7 +33,7 @@ export const dictionaries = {
       footerNavAria: "Footer Navigation",
       openMenu: "Open navigation menu",
       closeMenu: "Close navigation menu",
-      navIndex: "// NAVIGATION INDEX",
+      navIndex: "// NAVIGATION",
       studioTime: "Studio Time in Ulaanbaatar",
       studioSuffix: "Studio",
       rights: "All rights reserved",
@@ -40,13 +44,15 @@ export const dictionaries = {
 
     nav: {
       brand: "KSDigital",
+
       links: [
         { label: "About", href: "#about" },
         { label: "Services", href: "#services" },
         { label: "Work", href: "#work" },
-        { label: "Templates", href: "#templates" },
+        { label: "Products", href: "#templates" },
         { label: "Contact", href: "#contact" },
       ],
+
       cta: {
         label: "Start a Project",
         href: "#contact",
@@ -55,19 +61,19 @@ export const dictionaries = {
 
     hero: {
       ariaLabel: "Hero Introduction",
-      scrollCueAria: "Scroll down to About section",
-      statusBadge: "Available for Q3 / Q4 2026",
-      slotsOpen: "2 SLOTS OPEN",
+      scrollCueAria: "Scroll down to the About section",
+      statusBadge: "Taking projects for Q3 / Q4 2026",
+      slotsOpen: "2 PROJECT SLOTS OPEN",
       webglTag: "WebGL · 60 FPS",
 
       headlineWords: [
         "Bespoke design.",
-        "Relentless engineering.",
+        "Solid engineering.",
         "Exceptional web.",
       ],
 
       subheadline:
-        "Independent digital craft studio in Ulaanbaatar. We construct ultra-fast websites, scalable applications, and custom digital ecosystems — engineered to feel inevitable.",
+        "A digital studio from Ulaanbaatar. We design and build fast websites, web applications, and custom digital products that look great and work even better.",
 
       primaryCta: {
         label: "Start a Project",
@@ -75,7 +81,7 @@ export const dictionaries = {
       },
 
       secondaryCta: {
-        label: "Explore Selected Work",
+        label: "View Our Work",
         href: "#work",
       },
 
@@ -83,41 +89,41 @@ export const dictionaries = {
 
       telemetry: [
         {
-          label: "Studio Hub",
-          value: "Ulaanbaatar, MN",
+          label: "Based In",
+          value: "Ulaanbaatar, Mongolia",
         },
         {
           label: "Specialization",
-          value: "Full-Stack Web & UI/UX",
+          value: "Web Development & UI/UX",
         },
         {
-          label: "Architecture",
+          label: "Stack",
           value: "React · GSAP · WebGL",
         },
       ],
     },
 
     marquee: [
-      "Interface Architecture",
-      "WebGL Atmospheres",
-      "Motion Systems",
-      "Headless Commerce",
+      "Web Design",
+      "Web Development",
+      "UI/UX Design",
+      "Motion Design",
+      "E-Commerce",
       "Brand Identity",
-      "Performance Engineering",
-      "Product Platforms",
-      "Editorial Layouts",
+      "Performance",
+      "Digital Products",
     ],
 
     about: {
-      label: "01 — Studio",
-      heading: "A small studio with an unreasonably high bar.",
+      label: "01 — About",
+      heading: "Small team. Big standards.",
 
-      body: "KSDigital is not a factory. We take a handful of partners each quarter and treat every surface — type, motion, infrastructure — as a single instrument. Built in Ulaanbaatar. Shipped everywhere.",
+      body: "KSDigital is an independent digital studio based in Ulaanbaatar. We keep our team small, take on a limited number of projects, and focus on making every detail count — from the first idea to the final line of code.",
 
       stats: [
         {
           value: "40+",
-          label: "Launches",
+          label: "Projects",
         },
         {
           value: "98",
@@ -125,60 +131,60 @@ export const dictionaries = {
         },
         {
           value: "6",
-          label: "Years in craft",
+          label: "Years of Experience",
         },
         {
           value: "12",
-          label: "Week sprints",
+          label: "Week Sprints",
         },
       ],
     },
 
     services: {
-      label: "02 — Capabilities",
-      heading: "What we actually <em>build</em>.",
+      label: "02 — Services",
+      heading: "What we <em>do</em>.",
 
       items: [
         {
           index: "01",
-          title: "Brand & Interface",
-          copy: "Identity systems, typographic languages, and product UI that feel owned — not templated.",
-          tags: ["Identity", "Design systems", "UI kits"],
+          title: "Brand & UI/UX",
+          copy: "We create visual identities, websites, and interfaces that feel clean, consistent, and made for your brand.",
+          tags: ["Branding", "UI/UX", "Design Systems"],
         },
 
         {
           index: "02",
-          title: "Web Engineering",
-          copy: "React, edge delivery, and obsessive performance. Sites that load like they were waiting for you.",
+          title: "Web Development",
+          copy: "Fast, responsive, and reliable websites built with modern technologies and a strong focus on performance.",
           tags: ["React", "Next / Vite", "CMS"],
         },
 
         {
           index: "03",
           title: "Motion & 3D",
-          copy: "GSAP timelines, scroll worlds, and WebGL set pieces that make the brand physically felt.",
-          tags: ["GSAP", "Three.js", "Shaders"],
+          copy: "Animations, interactive effects, and 3D experiences that make your website more engaging without getting in the way.",
+          tags: ["GSAP", "Three.js", "WebGL"],
         },
 
         {
           index: "04",
-          title: "Product Platforms",
-          copy: "Dashboards, client portals, and internal tools with the same cinematic restraint as the marketing site.",
+          title: "Digital Products",
+          copy: "From dashboards and admin panels to SaaS platforms and custom web applications, we build products that are easy to use and ready to grow.",
           tags: ["SaaS", "Auth", "APIs"],
         },
       ],
     },
 
     work: {
-      label: "03 — Selected work",
-      heading: "Projects we still talk about.",
+      label: "03 — Selected Work",
+      heading: "A few things we've built.",
 
       items: [
         {
           index: "01",
           year: "2026",
           title: "Nomad Reserve",
-          category: "Private banking",
+          category: "Private Banking",
           tags: ["Product", "Motion"],
           tone: "lime",
         },
@@ -187,7 +193,7 @@ export const dictionaries = {
           index: "02",
           year: "2025",
           title: "Altai Atelier",
-          category: "Luxury expeditions",
+          category: "Luxury Travel",
           tags: ["Brand", "Editorial"],
           tone: "stone",
         },
@@ -196,8 +202,8 @@ export const dictionaries = {
           index: "03",
           year: "2025",
           title: "Khaan Commerce",
-          category: "Headless retail",
-          tags: ["Engineering", "3D"],
+          category: "E-Commerce",
+          tags: ["Development", "3D"],
           tone: "ink",
         },
 
@@ -205,77 +211,77 @@ export const dictionaries = {
           index: "04",
           year: "2024",
           title: "Orbit OS",
-          category: "Creative platform",
-          tags: ["SaaS", "Interface"],
+          category: "Digital Platform",
+          tags: ["SaaS", "UI/UX"],
           tone: "ember",
         },
       ],
     },
 
     process: {
-      label: "04 — Method",
-      heading: "A sequence, not a scramble.",
+      label: "04 — Process",
+      heading: "Simple process. Better results.",
 
       steps: [
         {
           index: "01",
           title: "Discover",
-          copy: "Constraints, audience, and the one feeling the product must leave behind.",
+          copy: "We learn about your business, your audience, and what you actually need.",
         },
 
         {
           index: "02",
-          title: "Architect",
-          copy: "Information, motion language, and a technical spine before a single decorative pixel.",
+          title: "Plan",
+          copy: "We define the structure, visual direction, features, and technology before development begins.",
         },
 
         {
           index: "03",
-          title: "Craft",
-          copy: "Type, interaction, and code in lockstep. Weekly cuts. No mystery weeks.",
+          title: "Build",
+          copy: "Design and development happen together. You see progress, give feedback, and stay involved.",
         },
 
         {
           index: "04",
           title: "Launch",
-          copy: "Hardening, analytics, and a handoff that still looks like we care six months later.",
+          copy: "We test everything, optimize performance, and launch a finished product that is ready to use.",
         },
       ],
     },
 
     templates: {
       label: "05 — Products",
-      heading: "Ready-made, still <em>bespoke</em>.",
+      heading: "Ready to use. Easy to <em>make yours</em>.",
 
       items: [
         {
           title: "Atelier",
-          type: "Agency template",
+          type: "Agency Template",
           price: "$190",
-          note: "Editorial dark, scroll-driven",
+          note: "Dark editorial design with smooth interactions",
         },
 
         {
           title: "Ledger",
-          type: "SaaS marketing",
+          type: "SaaS Template",
           price: "$240",
-          note: "Dashboard + landing system",
+          note: "Dashboard and landing page system",
         },
 
         {
           title: "North",
-          type: "Portfolio",
+          type: "Portfolio Template",
           price: "$160",
-          note: "Case-study cinema layout",
+          note: "Clean cinematic case-study layout",
         },
       ],
     },
 
     contact: {
       label: "06 — Contact",
-      heading: "Let’s make something people screenshot.",
+      heading: "Let's build something great.",
 
-      body: "Tell us what you’re building. If it’s a fit, you’ll hear from us within two business days — not a funnel, a conversation.",
+      body: "Have an idea, a new business, or a project that needs a better digital experience? Tell us about it. We'll get back to you within two business days.",
 
       email: shared.meta.email,
 
@@ -285,9 +291,9 @@ export const dictionaries = {
         email: "Email",
         emailPlaceholder: "you@studio.com",
         project: "Project",
-        projectPlaceholder: "What are we building?",
-        submit: "Send the brief",
-        sent: "Received — we’ll reply soon",
+        projectPlaceholder: "Tell us about your project",
+        submit: "Send Message",
+        sent: "Message received — we'll be in touch soon",
       },
     },
   },
@@ -299,16 +305,16 @@ export const dictionaries = {
   mn: {
     meta: {
       ...shared.meta,
-      studioType: "Дижитал инженерчлэл ба дизайны студи",
+      studioType: "Дижитал дизайн ба хөгжүүлэлтийн студи",
       location: "Улаанбаатар, Монгол",
-      title: "KSDigital — Дижитал туршлага ба вэб хөгжүүлэлт",
+      title: "KSDigital — Дижитал дизайн ба хөгжүүлэлт",
 
       description:
-        "KSDigital нь Улаанбаатар дахь дижитал студи бөгөөд өндөр гүйцэтгэлтэй захиалгат вэбсайт, вэб аппликейшн, дижитал платформ бүтээдэг.",
+        "KSDigital нь Улаанбаатар хотод байрладаг дижитал студи. Бид орчин үеийн вэбсайт, вэб аппликейшн болон захиалгат дижитал бүтээгдэхүүн бүтээдэг.",
 
       status: {
         isAvailable: true,
-        text: "Шинэ төсөлд нээлттэй",
+        text: "Шинэ төсөл хүлээн авч байна",
       },
     },
 
@@ -316,15 +322,15 @@ export const dictionaries = {
       homeAria: "KSDigital нүүр хуудас",
       navAria: "Үндсэн цэс",
       footerNavAria: "Хөл хэсгийн цэс",
-      openMenu: "Үндсэн цэс нээх",
-      closeMenu: "Үндсэн цэс хаах",
+      openMenu: "Цэс нээх",
+      closeMenu: "Цэс хаах",
       navIndex: "// НАВИГАЦИ",
       studioTime: "Улаанбаатарын студийн цаг",
       studioSuffix: "Студи",
       rights: "Бүх эрх хуулиар хамгаалагдсан",
       langEn: "EN",
       langMn: "MN",
-      langAria: "Сайтын хэл солих",
+      langAria: "Сайтын хэл",
     },
 
     nav: {
@@ -361,19 +367,19 @@ export const dictionaries = {
 
     hero: {
       ariaLabel: "Үндсэн танилцуулга",
-      scrollCueAria: "Бидний тухай хэсэг рүү доош гүйлгэх",
-      statusBadge: "2026 оны III / IV улиралд нээлттэй",
-      slotsOpen: "2 ЗАХИАЛГА БОЛОМЖТОЙ",
+      scrollCueAria: "Бидний тухай хэсэг рүү гүйлгэх",
+      statusBadge: "2026 оны III / IV улирлын төсөл хүлээн авч байна",
+      slotsOpen: "2 ТӨСӨЛ АВАХ БОЛОМЖТОЙ",
       webglTag: "WebGL · 60 FPS",
 
       headlineWords: [
         "Захиалгат дизайн.",
-        "Шилдэг инженерчлэл.",
-        "Онцгой дижитал шийдэл.",
+        "Чанартай хөгжүүлэлт.",
+        "Онцгой вэб.",
       ],
 
       subheadline:
-        "Улаанбаатар хот дахь бие даасан дижитал урлалын студи. Бид хэт өндөр хурдны вэбсайт, өргөтгөх боломжит аппликейшн, захиалгат дижитал экосистемийг төгс зохицолтойгоор урлан бүтээнэ.",
+        "Улаанбаатар дахь дижитал студи. Бид хурдан, гоё, хэрэглэхэд хялбар вэбсайт, вэб аппликейшн болон захиалгат дижитал бүтээгдэхүүн бүтээнэ.",
 
       primaryCta: {
         label: "Төсөл эхлүүлэх",
@@ -381,53 +387,53 @@ export const dictionaries = {
       },
 
       secondaryCta: {
-        label: "Сонгосон төслүүд",
+        label: "Төслүүд үзэх",
         href: "#work",
       },
 
-      scrollIndicator: "ДООШ ГҮЙЛГЭЖ ТАНИЛЦАХ",
+      scrollIndicator: "ГҮЙЛГЭЖ ТАНИЛЦАХ",
 
       telemetry: [
         {
-          label: "Студийн байршил",
-          value: "Улаанбаатар, MN",
+          label: "Байршил",
+          value: "Улаанбаатар, Монгол",
         },
         {
-          label: "Үндсэн чиглэл",
-          value: "Full-Stack Web & UI/UX",
+          label: "Чиглэл",
+          value: "Web Development & UI/UX",
         },
         {
-          label: "Архитектур",
+          label: "Технологи",
           value: "React · GSAP · WebGL",
         },
       ],
     },
 
     marquee: [
-      "Интерфейсийн архитектур",
-      "WebGL интерактив орчин",
-      "Моушн систем",
-      "Headless цахим худалдаа",
-      "Брэндийн өнгө төрх",
-      "Өндөр хурдны инженерчлэл",
-      "Дижитал бүтээгдэхүүний платформ",
-      "Редакцын онцгой зохиомж",
+      "Вэб дизайн",
+      "Вэб хөгжүүлэлт",
+      "UI/UX дизайн",
+      "Моушн дизайн",
+      "Цахим худалдаа",
+      "Брэнд дизайн",
+      "Гүйцэтгэлийн оновчлол",
+      "Дижитал бүтээгдэхүүн",
     ],
 
     about: {
-      label: "01 — Студи",
-      heading: "Өндөр шалгуур, төгс чанарыг эрхэмлэдэг бүтээлч студи.",
+      label: "01 — Бидний тухай",
+      heading: "Цөөн хүн. Өндөр стандарт.",
 
-      body: "KSDigital бол конвейерийн үйлдвэр биш. Бид улирал бүр цөөн тооны хамтрагчтай нягт ажиллаж, үсгийн соёл, хөдөлгөөн, дэд бүтэц бүрийг нэгдмэл симфони мэт нарийн урладаг. Улаанбаатарт бүтээж, дэлхийд нийлүүлнэ.",
+      body: "KSDigital бол Улаанбаатар хотод байрладаг бие даасан дижитал студи. Бид нэг дор цөөн төсөл авч, санаанаас нь эхлээд эцсийн код хүртэл бүх зүйлд анхаарч ажилладаг.",
 
       stats: [
         {
           value: "40+",
-          label: "Амжилттай нээлт",
+          label: "Төсөл",
         },
         {
           value: "98",
-          label: "Дундаж Lighthouse оноо",
+          label: "Дундаж Lighthouse",
         },
         {
           value: "6",
@@ -441,35 +447,35 @@ export const dictionaries = {
     },
 
     services: {
-      label: "02 — Чадвар ба чиглэл",
-      heading: "Бидний бодит <em>бүтээлүүд</em>.",
+      label: "02 — Үйлчилгээ",
+      heading: "Бид юу <em>хийдэг</em> вэ?",
 
       items: [
         {
           index: "01",
-          title: "Брэнд ба Интерфейс",
-          copy: "Дахин давтагдашгүй өнгө төрх, үсгийн соёл болон загвар хуулбарлаагүй, өөрийн гэсэн онцлогтой бүтээгдэхүүний UI дизайн.",
-          tags: ["Брэнд төсөл", "Дизайн систем", "UI кит"],
+          title: "Брэнд ба UI/UX",
+          copy: "Таны брэндэд тохирсон лого, өнгө төрх, вэбсайт болон цэвэрхэн, хэрэглэхэд хялбар интерфейс бүтээнэ.",
+          tags: ["Брэндинг", "UI/UX", "Дизайн систем"],
         },
 
         {
           index: "02",
-          title: "Вэб инженерчлэл",
-          copy: "React, edge технологи, хэт өндөр хурдны гүйцэтгэл. Хүлээлт үүсгэхгүйгээр агшин зуурт ачааллах шилдэг вэбүүд.",
+          title: "Вэб хөгжүүлэлт",
+          copy: "Орчин үеийн технологи ашиглан хурдан, responsive, найдвартай вэбсайт болон вэб аппликейшн хөгжүүлнэ.",
           tags: ["React", "Next / Vite", "CMS"],
         },
 
         {
           index: "03",
           title: "Моушн ба 3D",
-          copy: "GSAP хугацааны шугам, интерактив скролл болон брэндийг амьд мэт мэдрүүлэх WebGL визуал найруулга.",
-          tags: ["GSAP", "Three.js", "Shaders"],
+          copy: "Вэбсайтыг илүү сонирхолтой болгох animation, интерактив эффект болон 3D шийдлүүдийг бүтээнэ.",
+          tags: ["GSAP", "Three.js", "WebGL"],
         },
 
         {
           index: "04",
-          title: "Бүтээгдэхүүний платформ",
-          copy: "Хяналтын самбар (dashboard), харилцагчийн портал, дотоод системүүдийг маркетинг сайттай ижил өндөр зэрэглэлд бүтээдэг.",
+          title: "Дижитал бүтээгдэхүүн",
+          copy: "Dashboard, admin panel, SaaS платформ болон захиалгат вэб аппликейшн зэрэг өсөж хөгжих боломжтой бүтээгдэхүүн бүтээнэ.",
           tags: ["SaaS", "Auth", "API"],
         },
       ],
@@ -477,7 +483,7 @@ export const dictionaries = {
 
     work: {
       label: "03 — Сонгосон төслүүд",
-      heading: "Бидний бахархал болсон ажлууд.",
+      heading: "Бидний хийсэн ажлуудаас.",
 
       items: [
         {
@@ -493,8 +499,8 @@ export const dictionaries = {
           index: "02",
           year: "2025",
           title: "Altai Atelier",
-          category: "Дээд зэрэглэлийн аялал",
-          tags: ["Брэнд", "Редакци"],
+          category: "Luxury аялал",
+          tags: ["Брэнд", "Редакц"],
           tone: "stone",
         },
 
@@ -502,8 +508,8 @@ export const dictionaries = {
           index: "03",
           year: "2025",
           title: "Khaan Commerce",
-          category: "Headless цахим худалдаа",
-          tags: ["Инженерчлэл", "3D"],
+          category: "Цахим худалдаа",
+          tags: ["Хөгжүүлэлт", "3D"],
           tone: "ink",
         },
 
@@ -511,89 +517,89 @@ export const dictionaries = {
           index: "04",
           year: "2024",
           title: "Orbit OS",
-          category: "Креатив платформ",
-          tags: ["SaaS", "Интерфейс"],
+          category: "Дижитал платформ",
+          tags: ["SaaS", "UI/UX"],
           tone: "ember",
         },
       ],
     },
 
     process: {
-      label: "04 — Арга барил",
-      heading: "Тодорхой дэс дараалал. Санамсаргүй алхамгүй.",
+      label: "04 — Процесс",
+      heading: "Энгийн процесс. Илүү сайн үр дүн.",
 
       steps: [
         {
           index: "01",
-          title: "Судалгаа",
-          copy: "Хязгаарлалт, зорилтот хэрэглэгчид болон бүтээгдэхүүний төрүүлэх гол мэдрэмжийг тодорхойлно.",
+          title: "Судлах",
+          copy: "Таны бизнес, хэрэглэгчид болон яг юу хэрэгтэй байгааг ойлгож авна.",
         },
 
         {
           index: "02",
-          title: "Архитектур",
-          copy: "Нэг ч чимэглэлийн пиксел тавихаас өмнө мэдээллийн бүтэц, хөдөлгөөний хэл, технологийн суурийг босгоно.",
+          title: "Төлөвлөх",
+          copy: "Хөгжүүлэлт эхлэхээс өмнө сайтын бүтэц, дизайн, функц болон технологио тодорхойлно.",
         },
 
         {
           index: "03",
-          title: "Урлал",
-          copy: "Үсгийн соёл, харилцан үйлдэл болон кодыг зэрэгцүүлэн хөгжүүлнэ. Долоо хоног бүрийн тайлан, нууц далд үе шатгүй.",
+          title: "Бүтээх",
+          copy: "Дизайн болон хөгжүүлэлтийг зэрэг явуулна. Та ажлын явцыг харж, санал өгч, шийдвэр бүрт оролцоно.",
         },
 
         {
           index: "04",
-          title: "Нээлт",
-          copy: "Гүйцэтгэлийг бэхжүүлж, аналитик тохируулан, урт хугацааны найдвартай ажиллагааг баталгаажуулсан хүлээлгэн өгөх үйл явц.",
+          title: "Нэвтрүүлэх",
+          copy: "Бүх зүйлийг шалгаж, хурд болон ажиллагааг сайжруулаад бэлэн бүтээгдэхүүнийг нээлтэд гаргана.",
         },
       ],
     },
 
     templates: {
       label: "05 — Бүтээгдэхүүн",
-      heading: "Бэлэн загвар, гэхдээ <em>онцгой шийдэл</em>.",
+      heading: "Бэлэн загвар. Өөрийнхөөрөө <em>ашигла</em>.",
 
       items: [
         {
           title: "Atelier",
-          type: "Агентлагийн загвар",
+          type: "Agency Template",
           price: "$190",
-          note: "Редакцын харанхуй хэв маяг, интерактив скролл",
+          note: "Dark дизайн, smooth animation, интерактив эффект",
         },
 
         {
           title: "Ledger",
-          type: "SaaS маркетинг",
+          type: "SaaS Template",
           price: "$240",
-          note: "Хяналтын самбар + нүүр хуудасны систем",
+          note: "Dashboard болон landing page-ийн нэгдсэн загвар",
         },
 
         {
           title: "North",
-          type: "Портфолио",
+          type: "Portfolio Template",
           price: "$160",
-          note: "Кэйс судалгааны кино зохиомж",
+          note: "Цэвэрхэн, cinematic portfolio загвар",
         },
       ],
     },
 
     contact: {
       label: "06 — Холбоо барих",
-      heading: "Бусдын анхаарлыг татаж, бахархал төрүүлэх зүйлсийг хамтдаа бүтээцгээе.",
+      heading: "Хамтдаа гоё зүйл бүтээцгээе.",
 
-      body: "Та ямар төсөл эхлүүлэхээр төлөвлөж байгаагаа хуваалцаарай. Хэрэв бидний чиглэл тохирвол ажлын хоёр өдрийн дотор эргэн холбогдоно — автомат юүлүүр биш, бодит яриа.",
+      body: "Шинэ санаа, бизнес эсвэл илүү сайн дижитал шийдэл хэрэгтэй төсөл байна уу? Бидэнд төслийнхөө талаар хэлээрэй. Ажлын хоёр өдрийн дотор эргэн холбогдоно.",
 
       email: shared.meta.email,
 
       form: {
         name: "Нэр",
         namePlaceholder: "Таны нэр",
-        email: "Имэйл хаяг",
+        email: "Имэйл",
         emailPlaceholder: "you@studio.com",
-        project: "Төслийн мэдээлэл",
-        projectPlaceholder: "Бид ямар төсөл хамтран бүтээх вэ?",
-        submit: "Төслийн товч мэдээлэл илгээх",
-        sent: "Хүлээн авлаа — тун удахгүй хариу өгнө",
+        project: "Төсөл",
+        projectPlaceholder: "Төслийнхөө талаар бичнэ үү",
+        submit: "Илгээх",
+        sent: "Хүлээн авлаа — удахгүй холбогдоно",
       },
     },
   },
@@ -619,4 +625,3 @@ export function getContent(language = "en") {
 export const content = dictionaries.en;
 
 export default dictionaries;
-
