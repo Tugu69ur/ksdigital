@@ -9,13 +9,44 @@
   gap: 1rem;
 }
 
+.templates__intro {
+  color: var(--text-secondary);
+  max-width: 42rem;
+  font-size: var(--text-lead);
+  line-height: 1.7;
+}
+
+.templates__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.6rem;
+}
+
+.templates__category {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-strong);
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
 .templates__grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.1rem;
 }
 
-@media (min-width: 860px) {
+@media (min-width: 700px) {
+  .templates__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1060px) {
   .templates__grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -26,12 +57,13 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--bg-surface);
-  transition: transform var(--transition-base), border-color var(--transition-base);
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
 .template-card:hover {
   transform: translateY(-6px);
   border-color: rgba(200, 255, 0, 0.3);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.35);
 }
 
 .template-card__preview {
@@ -42,7 +74,7 @@
   overflow: hidden;
 }
 
-.template-card__preview span {
+.template-card__preview > span:last-child {
   font-family: var(--font-display);
   font-size: 2.4rem;
   font-weight: 800;
@@ -51,25 +83,73 @@
   z-index: 1;
 }
 
+.template-card:hover .template-card__preview > span:last-child {
+  animation: preview-float 1.4s ease-in-out infinite;
+}
+
+@keyframes preview-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.template-card__badge {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  background: rgba(8, 8, 8, 0.66);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-strong);
+  padding: 0.28rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
 .template-card__preview--1 {
   background:
     radial-gradient(circle at 30% 20%, rgba(200, 255, 0, 0.35), transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08), transparent 42%),
+    radial-gradient(circle at 80% 80%, rgba(160, 110, 60, 0.28), transparent 42%),
     #0a0a08;
 }
 
 .template-card__preview--2 {
   background:
-    radial-gradient(circle at 70% 30%, rgba(120, 160, 255, 0.28), transparent 42%),
-    radial-gradient(circle at 20% 80%, rgba(200, 255, 0, 0.18), transparent 40%),
-    #09090c;
+    radial-gradient(circle at 70% 30%, rgba(255, 140, 70, 0.32), transparent 42%),
+    radial-gradient(circle at 20% 80%, rgba(200, 255, 0, 0.16), transparent 40%),
+    #0b0907;
 }
 
 .template-card__preview--3 {
   background:
-    radial-gradient(circle at 50% 40%, rgba(255, 180, 90, 0.22), transparent 45%),
-    radial-gradient(circle at 10% 10%, rgba(200, 255, 0, 0.16), transparent 38%),
-    #0b0a08;
+    radial-gradient(circle at 50% 30%, rgba(235, 130, 180, 0.24), transparent 45%),
+    radial-gradient(circle at 10% 85%, rgba(200, 255, 0, 0.14), transparent 38%),
+    #0c090b;
+}
+
+.template-card__preview--4 {
+  background:
+    radial-gradient(circle at 65% 25%, rgba(255, 255, 255, 0.14), transparent 42%),
+    radial-gradient(circle at 20% 75%, rgba(200, 255, 0, 0.2), transparent 40%),
+    #0a0a0a;
+}
+
+.template-card__preview--5 {
+  background:
+    radial-gradient(circle at 70% 30%, rgba(120, 160, 255, 0.26), transparent 42%),
+    radial-gradient(circle at 20% 80%, rgba(200, 255, 0, 0.16), transparent 40%),
+    #09090c;
+}
+
+.template-card__preview--6 {
+  background:
+    radial-gradient(circle at 50% 40%, rgba(70, 220, 190, 0.24), transparent 45%),
+    radial-gradient(circle at 15% 15%, rgba(200, 255, 0, 0.14), transparent 38%),
+    #080a09;
 }
 
 .template-card__body {
@@ -93,12 +173,14 @@
 
 .template-card__price {
   text-align: right;
+  flex-shrink: 0;
 }
 
 .template-card__price strong {
   font-family: var(--font-mono);
   color: var(--accent);
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .template-card__price span {

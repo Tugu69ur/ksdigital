@@ -8,9 +8,12 @@ import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Services from './components/sections/Services';
-import Work from './components/sections/Work';
-import Process from './components/sections/Process';
+import WaysToBuild from './components/sections/WaysToBuild';
 import Templates from './components/sections/Templates';
+import Process from './components/sections/Process';
+import Maintenance from './components/sections/Maintenance';
+import WhyUs from './components/sections/WhyUs';
+import Audience from './components/sections/Audience';
 import Contact from './components/sections/Contact';
 
 export default function App() {
@@ -26,9 +29,12 @@ export default function App() {
           <Marquee />
           <About />
           <Services />
-          <Work />
-          <Process />
+          <WaysToBuild />
           <Templates />
+          <Process />
+          <Maintenance />
+          <WhyUs />
+          <Audience />
           <Contact />
         </main>
         <Footer />

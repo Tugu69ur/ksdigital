@@ -9,6 +9,13 @@
   gap: 1rem;
 }
 
+.services__intro {
+  color: var(--text-secondary);
+  max-width: 42rem;
+  font-size: var(--text-lead);
+  line-height: 1.7;
+}
+
 .services__bento {
   display: grid;
   grid-template-columns: 1fr;

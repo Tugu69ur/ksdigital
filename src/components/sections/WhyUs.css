@@ -1,0 +1,77 @@
+.why {
+  padding: 0 0 var(--section-space);
+}
+
+.why__head {
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.why__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.why-row {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.4rem 1.25rem;
+  align-items: center;
+  padding: 1.35rem 0.6rem;
+  border-bottom: 1px solid var(--border-subtle);
+  isolation: isolate;
+}
+
+@media (min-width: 860px) {
+  .why-row {
+    grid-template-columns: 3.2rem minmax(14rem, 0.9fr) 1fr;
+    padding: 1.7rem 0.8rem;
+    gap: 1.5rem;
+  }
+}
+
+.why-row__glow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  background: linear-gradient(90deg, rgba(200, 255, 0, 0.08), transparent 55%);
+  transition: opacity 0.45s var(--ease-out);
+}
+
+.why-row:hover .why-row__glow {
+  opacity: 1;
+}
+
+.why-row__index {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+}
+
+.why-row__title {
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  letter-spacing: -0.03em;
+  transition: color var(--transition-fast);
+}
+
+.why-row:hover .why-row__title {
+  color: var(--accent);
+}
+
+.why-row__copy {
+  color: var(--text-secondary);
+  grid-column: 2;
+}
+
+@media (min-width: 860px) {
+  .why-row__copy {
+    grid-column: 3;
+  }
+}

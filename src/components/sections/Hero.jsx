@@ -127,9 +127,9 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* <p className="hero__subheadline" ref={sublineRef}>
+          <p className="hero__subheadline" ref={sublineRef}>
             {t.hero.subheadline}
-          </p> */}
+          </p>
 
           <div className="hero__cta-group" ref={ctaGroupRef}>
             <div ref={primaryBtnRef} className="hero__cta-wrap">

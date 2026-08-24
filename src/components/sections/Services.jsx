@@ -19,6 +19,9 @@ export default function Services() {
             data-reveal
             dangerouslySetInnerHTML={{ __html: t.services.heading }}
           />
+          {t.services.intro && (
+            <p className="services__intro" data-reveal>{t.services.intro}</p>
+          )}
         </div>
 
         <div className="services__bento">

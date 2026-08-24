@@ -30,6 +30,27 @@ export default function Contact() {
             {t.contact.email}
             <ArrowUpRight size={28} />
           </a>
+
+          <div className="contact__cta-row" data-reveal>
+            <div ref={btnRef} className="contact__cta-wrap">
+              <a
+                href={t.contact.primaryCta.href}
+                className="contact__btn-primary"
+                data-interactive="true"
+              >
+                <span>{t.contact.primaryCta.label}</span>
+                <ArrowUpRight size={16} aria-hidden="true" />
+              </a>
+            </div>
+            <a
+              href={t.contact.secondaryCta.href}
+              className="contact__btn-secondary"
+              data-reveal
+              data-interactive="true"
+            >
+              {t.contact.secondaryCta.label}
+            </a>
+          </div>
         </div>
 
         <form className="contact__form" onSubmit={onSubmit} data-reveal>
@@ -45,7 +66,7 @@ export default function Contact() {
             <span>{t.contact.form.project}</span>
             <textarea name="message" rows="4" placeholder={t.contact.form.projectPlaceholder} required />
           </label>
-          <div ref={btnRef} className="contact__submit-wrap">
+          <div className="contact__submit-wrap">
             <button type="submit" className="contact__submit" data-interactive="true">
               {sent ? t.contact.form.sent : t.contact.form.submit}
               <ArrowUpRight size={16} />

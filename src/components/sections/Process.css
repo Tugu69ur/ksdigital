@@ -19,9 +19,15 @@
   overflow: hidden;
 }
 
-@media (min-width: 860px) {
+@media (min-width: 700px) {
   .process__list {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .process__list {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -30,7 +36,7 @@
   padding: 2rem 1.6rem 1.8rem;
   display: flex;
   flex-direction: column;
-  min-height: 260px;
+  min-height: 240px;
   position: relative;
 }
 
@@ -58,11 +64,11 @@
 }
 
 .process__step h3 {
-  font-size: 1.45rem;
+  font-size: 1.3rem;
   margin: 1.5rem 0 0.6rem;
 }
 
 .process__step p {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 }

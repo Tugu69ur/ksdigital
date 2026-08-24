@@ -18,28 +18,42 @@ export default function Templates() {
             data-reveal
             dangerouslySetInnerHTML={{ __html: t.templates.heading }}
           />
+          <p className="templates__intro" data-reveal>{t.templates.intro}</p>
+
+          <div className="templates__categories" data-reveal>
+            {t.templates.categories.map((category) => (
+              <span key={category} className="templates__category">{category}</span>
+            ))}
+          </div>
         </div>
+
         <div className="templates__grid">
           {t.templates.items.map((item, i) => (
-            <article className="template-card" key={item.title} data-reveal data-interactive="true">
+            <a
+              href="#contact"
+              className="template-card"
+              key={item.title}
+              data-reveal
+              data-interactive="true"
+            >
               <div className={`template-card__preview template-card__preview--${i + 1}`}>
+                <span className="template-card__badge">{item.category}</span>
                 <span>{item.title}</span>
               </div>
               <div className="template-card__body">
                 <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.type}</p>
+                  <h3>{item.category}</h3>
+                  <p>{item.note}</p>
                 </div>
                 <div className="template-card__price">
                   <strong>{item.price}</strong>
-                  <span>{item.note}</span>
+                  <span>{item.title} Template</span>
                 </div>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>
     </section>
   );
 }
-

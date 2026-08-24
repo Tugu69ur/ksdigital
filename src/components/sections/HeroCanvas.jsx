@@ -15,7 +15,25 @@ export default function HeroCanvas() {
     const height = mount.clientHeight;
 
     const camera = new THREE.PerspectiveCamera(42, width / height, 0.1, 100);
-    camera.position.z = 5.8;
+
+    // Fit the whole object (orbit ring radius 2.15 + margin) inside
+    // BOTH frustum extents, since FOV is vertical and narrow containers
+    // would otherwise clip the scene horizontally.
+    const OBJECT_RADIUS = 2.5;
+
+    const fitCamera = () => {
+      const w = mount.clientWidth;
+      const h = mount.clientHeight;
+      if (!w || !h) return;
+
+      camera.aspect = w / h;
+      const vExtent = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+      const hExtent = vExtent * camera.aspect;
+      camera.position.z = Math.max(OBJECT_RADIUS / vExtent, OBJECT_RADIUS / hExtent);
+      camera.updateProjectionMatrix();
+    };
+
+    fitCamera();
 
     const renderer = new THREE.WebGLRenderer({
       alpha: true,
@@ -163,9 +181,8 @@ export default function HeroCanvas() {
       if (!mount) return;
       const newWidth = mount.clientWidth;
       const newHeight = mount.clientHeight;
-      camera.aspect = newWidth / newHeight;
-      camera.updateProjectionMatrix();
       renderer.setSize(newWidth, newHeight);
+      fitCamera();
     };
 
     window.addEventListener('resize', handleResize);
